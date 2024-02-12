@@ -7,25 +7,25 @@ class Odev2 {
             var totalAngle = (numberOfEdges - 2) * 180
             return totalAngle.toString()
         } else {
-            val result = "Kenar sayısı 2'den az olamaz"
+            val result = "Kenar sayısı 3'den az olamaz"
             return result
         }
     }
 
     //gün sayısına göre maaş hesabı
     fun soru2(day: Int): Int {
-        var hour = day * 8
+        val hour = day * 8
 
-        if (hour <= 150) {
+        return if (hour <= 150) {
             val salary = hour * 40
-            return salary
+            salary
 
         } else {
             val overtime = hour - 150
-            var overtimeWage = overtime * 80
+            val overtimeWage = overtime * 80
             val normalWage = 150 * 40
             val salary = overtimeWage + normalWage
-            return salary
+            salary
         }
     }
 
@@ -55,14 +55,14 @@ class Odev2 {
     }
 
     //faktoriyel hesabı
-    fun soru6(n: Int): Int {
-        var i = n
+    fun soru6(n: Int): String {
+        if (n < 0) return "n : 0 dan küçük olamaz"
         var factorial = 1
-        while (i != 0) {
-            factorial = factorial * i
-            i--
+        (1..n).forEach{
+            factorial *= it
         }
-        return factorial
+
+        return factorial.toString()
     }
 
     //kelimenin içinde kaç tane e harfi olduğunu bul
