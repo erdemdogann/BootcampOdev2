@@ -2,74 +2,74 @@ package com.example.bootcampodev2.odev2
 
 class Odev2 {
     //iç açılar toplamı sorusu
-    fun soru1(kenarSayısı: Int): String {
-        if (kenarSayısı > 2) {
-            var icAci = (kenarSayısı - 2) * 180
-            return icAci.toString()
+    fun soru1(numberOfEdges: Int): String {
+        if (numberOfEdges > 2) {
+            var totalAngle = (numberOfEdges - 2) * 180
+            return totalAngle.toString()
         } else {
-            val sonuc = "Kenar sayısı 2'den az olamaz"
-            return sonuc
+            val result = "Kenar sayısı 2'den az olamaz"
+            return result
         }
     }
 
     //gün sayısına göre maaş hesabı
-    fun soru2(gun: Int): Int {
-        var kacSaat = gun * 8
+    fun soru2(day: Int): Int {
+        var hour = day * 8
 
-        if (kacSaat <= 150) {
-            val maas = kacSaat * 40
-            return maas
+        if (hour <= 150) {
+            val salary = hour * 40
+            return salary
 
         } else {
-            val mesaiSaati = kacSaat - 150
-            var mesaiUcreti = mesaiSaati * 80
-            val normalUcreti = 150 * 40
-            val toplamMaas = mesaiUcreti + normalUcreti
-            return toplamMaas
+            val overtime = hour - 150
+            var overtimeWage = overtime * 80
+            val normalWage = 150 * 40
+            val salary = overtimeWage + normalWage
+            return salary
         }
     }
 
     //otopark süresine göre otopark ücreti
-    fun soru3(saat: Double): Double {
-        if (saat <= 1) {
-            var ucret = 50.0
-            return ucret
+    fun soru3(hour: Double): Double {
+        if (hour <= 1) {
+            var wage = 50.0
+            return wage
         } else {
-            var asimSuresi = saat - 1
-            var asimUcreti = asimSuresi * 10
-            var toplamUcret = 50 + asimUcreti
-            return toplamUcret
+            var overtime = hour - 1
+            var overageFee = overtime * 10
+            var total = 50 + overageFee
+            return total
         }
     }
 
     //girilen km yi mile çevirme
     fun soru4(km: Double): Double {
-        var gidilenMil = km * 0.621
-        return gidilenMil
+        var mile = km * 0.621
+        return mile
     }
 
     //kenarları bilinen dikdörtgenin alan hesabı
-    fun soru5(kısaKenar: Int, uzunnciKenar: Int): Int {
-        val alan = kısaKenar * uzunnciKenar
-        return alan
+    fun soru5(shortEdge: Int, longSide: Int): Int {
+        val area = shortEdge * longSide
+        return area
     }
 
     //faktoriyel hesabı
     fun soru6(n: Int): Int {
         var i = n
-        var faktoriyel = 1
+        var factorial = 1
         while (i != 0) {
-            faktoriyel = faktoriyel * i
+            factorial = factorial * i
             i--
         }
-        return faktoriyel
+        return factorial
     }
 
     //kelimenin içinde kaç tane e harfi olduğunu bul
-    fun soru7(kelime: String) : Int {
-        val toplamKullanım = kelime.count { it == 'e' }
+    fun soru7(word: String) : Int {
+        val totalUsage = word.count { it == 'e' }
 
-        return toplamKullanım
+        return totalUsage
 
     }
 }
